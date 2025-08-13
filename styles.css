@@ -1,14 +1,43 @@
+header {
+    position: fixed;
+    /* or fixed if you want it to stay visible when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    /* or transparent if you want it to overlay the background image */
+    padding: 20px;
+    z-index: 10;
+    /* ensures it stays above other elements */
+}
+
 body {
     background-image: url(https://i.pinimg.com/474x/ff/2f/c7/ff2fc775d0b195a6b5624515e902a0cd.jpg);
     font-family: sans-serif;
     padding: 20px;
+
+    margin: 0;
+    padding-top: 80px
+        /* Remove body default margin so it truly starts at the top */
 }
 
-.portfolio {
-    width: 80%;
-    background-color: burlywood;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    max-width: 500px;
+.content-section {
+    display: none;
+}
+
+.default {
+    display: block;
+}
+
+.content-section:target {
+    display: block;
+}
+
+.content-section:target~.content-section {
+    display: none;
+}
+
+nav a:hover {
+    color: blue;
+    /* Change this to any color you like */
 }
