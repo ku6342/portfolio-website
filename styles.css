@@ -1,43 +1,77 @@
+/* Hide all main sections by default */
+.main-section {
+    display: none;
+}
+
+/* Show the targeted section */
+.main-section:target {
+    display: block;
+}
+
+/* Show home only when no hash is active */
+body:not(:has(:target)) #home {
+    display: block;
+}
+
+/* --- Portfolio Subsections using radio buttons --- */
+.content-section {
+    display: none;
+    /* hide all subsections by default */
+}
+
+/* Show content when its radio is checked */
+#tab-about:checked~.content .about,
+#tab-skills:checked~.content .skills,
+#tab-education:checked~.content .education,
+#tab-projects:checked~.content .projects,
+#tab-interests:checked~.content .interests {
+    display: block;
+}
+
+/* Optional: hide radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Style labels as tabs/buttons */
+label {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: 5px;
+    background: #eee;
+    border-radius: 5px;
+}
+
+input[type="radio"]:checked+label {
+    background: #ccc;
+}
+
+/* --- Styling --- */
 header {
     position: fixed;
-    /* or fixed if you want it to stay visible when scrolling */
     top: 0;
     left: 0;
     width: 100%;
     background: white;
-    /* or transparent if you want it to overlay the background image */
     padding: 20px;
     z-index: 10;
-    /* ensures it stays above other elements */
+}
+
+.profile img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
 }
 
 body {
     background-image: url(https://i.pinimg.com/474x/ff/2f/c7/ff2fc775d0b195a6b5624515e902a0cd.jpg);
     font-family: sans-serif;
-    padding: 20px;
-
     margin: 0;
-    padding-top: 80px
-        /* Remove body default margin so it truly starts at the top */
-}
-
-.content-section {
-    display: none;
-}
-
-.default {
-    display: block;
-}
-
-.content-section:target {
-    display: block;
-}
-
-.content-section:target~.content-section {
-    display: none;
+    padding: 20px;
+    padding-top: 80px;
+    /* account for fixed header */
 }
 
 nav a:hover {
     color: blue;
-    /* Change this to any color you like */
 }
