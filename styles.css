@@ -13,6 +13,76 @@ body:not(:has(:target)) #home {
     display: block;
 }
 
+
+.opening {
+    background-image: url("https://marvel-b1-cdn.bc0a.com/f00000000290162/images.ctfassets.net/2htm8llflwdx/1LEJIT9KGRC4nwTJ5vuS6H/a912e31c468fd32986f2818816135cc4/OnlineLearning_SouthAsia_Learning_Indoor_GettyImages-1071652068.jpg?fit=thumb");
+    background-size: cover;
+    /* fill the section */
+    background-position: center;
+    /* keep it centered */
+    background-repeat: no-repeat;
+    /* prevent tiling */
+
+    text-align: center;
+    /* centers text */
+    padding: 60px 20px;
+    /* space around text */
+}
+
+.opening h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.opening h2 {
+    font-size: 1.5rem;
+    color: white;
+    /* softer text color */
+}
+
+#home h3 {
+    text-align: center;
+    /* space between lines */
+}
+
+.mission {
+    display: flex;
+    align-items: flex-start;
+    /* vertically centers the image + text */
+    justify-content: space-between;
+    gap: 30px;
+    /* space between image and text */
+    margin: 40px 0;
+}
+
+.mission-image {
+    max-width: 600px;
+    /* controls image size */
+    height: auto;
+    flex-shrink: 0;
+    /* prevents image from shrinking too much */
+    border-radius: 10px;
+    /* optional: rounded corners */
+}
+
+.mission-text {
+    flex: 1;
+    text-align: left;
+    font-size: 1.2rem;
+    /* makes text bigger */
+    line-height: 1.6;
+    /* improves readability */
+    max-width: 600px;
+}
+
+.mission-text h2 {
+    font-size: 2rem;
+    /* bigger section title */
+    margin-bottom: 15px;
+}
+
+
 /* --- Portfolio Subsections using radio buttons --- */
 .content-section {
     display: none;
@@ -48,13 +118,46 @@ input[type="radio"]:checked+label {
 
 /* --- Styling --- */
 header {
+    display: flex;
+    justify-content: space-between;
+    /* text left, nav+img right */
+    align-items: center;
+    padding: 10px 20px;
+    background: white;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: white;
-    padding: 20px;
     z-index: 10;
+}
+
+.header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 40px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 20px;
+    /* space between nav and image */
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    /* spacing between links */
+}
+
+.header-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+
 }
 
 .profile img {
@@ -74,4 +177,25 @@ body {
 
 nav a:hover {
     color: blue;
+}
+
+.site-footer {
+    background-color: white;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #ddd;
+
+    width: 100%;
+    /* take full width */
+    margin: 0;
+    /* remove outside spacing */
+    position: relative;
+    left: 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
