@@ -237,6 +237,21 @@ nav {
     border-radius: 50%;
 }
 
+.profile {
+    text-align: center;
+    /* keeps image centered */
+    margin-bottom: 40px;
+    /* adds space below image */
+}
+
+.profile img {
+    max-width: 200px;
+    /* optional: keep image from being too big */
+    border-radius: 50%;
+    /* optional: make it circular */
+}
+
+
 body {
     background-image: url(https://i.pinimg.com/474x/ff/2f/c7/ff2fc775d0b195a6b5624515e902a0cd.jpg);
     font-family: sans-serif;
@@ -269,4 +284,75 @@ html,
 body {
     margin: 0;
     padding: 0;
+}
+
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.company-info,
+.contact-form {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.company-info h2,
+.contact-form h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.company-info p {
+    margin: 8px 0;
+    color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+form input[type="submit"] {
+    background: #007BFF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+form input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+#portfolio,
+#contact {
+    margin-top: 100px;
+    /* pushes them down below header */
 }
